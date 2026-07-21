@@ -1909,27 +1909,6 @@ Feel free to use, modify, and improve it for educational or personal purposes.
 - 🏥 Multi-Hospital Management
 - 🩺 Doctor Video Consultation
 - 📅 Online Appointment Booking
-### ⭐ Please Star the Repository ⭐
-
-<br>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&section=footer&color=0:00C6FF,100:0072FF&text=Thank%20You%20❤️&fontColor=ffffff&fontSize=40"/>
-
-</div>
-
----
-
-<div align="center">
-
-### 🚀 Built with HTML • CSS • JavaScript
-
-### Designed & Developed by Ayush Kumar
-
-### © 2026 All Rights Reserved
-
-</div>
-
-
 
 # 👨‍💻 About the Developer
 
