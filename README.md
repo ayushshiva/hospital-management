@@ -1480,40 +1480,9 @@ const ayush = {
 
 ---
 
-# 💻 Tech Stack
 
-<div align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode"/>
 
-<br><br>
-
-<img src="https://skillicons.dev/icons?i=firebase,mysql,nodejs,react,java"/>
-
-</div>
-
----
-
-# 📈 GitHub Statistics
-
-<div align="center">
-
-<img height="180em"
-src="https://github-readme-stats.vercel.app/api?username=ayushshiva&show_icons=true&theme=tokyonight&hide_border=true"/>
-
-</div>
-
----
-
-# 🔥 GitHub Streak
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=ayushshiva&theme=tokyonight&hide_border=true"/>
-
-</div>
-
----
 
 # 🌎 Most Used Languages
 
@@ -1526,13 +1495,7 @@ src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayushshiva&l
 
 ---
 
-# 🏆 GitHub Achievements
 
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=ayushshiva&theme=tokyonight&column=4&margin-w=15&margin-h=15"/>
-
-</div>
 
 ---
 
