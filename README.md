@@ -1801,52 +1801,7 @@ Special thanks to:
 
 <div align="center">
 
-## ⭐ Thank you for supporting this project!
 
-**Every ⭐ motivates future development.**
-
-</div>
-
-<!-- ================= END OF PART 7 ================= -->
-<!-- ========================================================= -->
-<!--               ULTIMATE README - PART 8                    -->
-<!-- ========================================================= -->
-
----
-
-# ❤️ Support This Project
-
-If you found this project useful, please consider supporting it.
-
-<div align="center">
-
-⭐ Star this Repository
-
-🍴 Fork this Repository
-
-💬 Share with your Friends
-
-📢 Recommend to Developers
-
-❤️ Spread Open Source
-
-</div>
-
----
-
-# 📞 Contact
-
-<div align="center">
-
-| Platform | Link |
-|-----------|------|
-| 🌐 Portfolio | https://ayushshiva.github.io/Portfolio/ |
-| 💻 GitHub | https://github.com/ayushshiva |
-| 💼 LinkedIn | https://www.linkedin.com/in/ayush-kumar-shiva137759/ |
-
-</div>
-
----
 
 # 📧 Connect With Me
 
