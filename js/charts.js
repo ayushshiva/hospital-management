@@ -4,8 +4,13 @@
     const canvas = document.getElementById('trend-chart');
     if (!canvas) return;
     const context = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
+    const bounds = canvas.getBoundingClientRect();
+    const width = Math.max(1, Math.round(bounds.width));
+    const height = Math.max(1, Math.round(bounds.height));
+    const pixelRatio = window.devicePixelRatio || 1;
+    canvas.width = Math.round(width * pixelRatio);
+    canvas.height = Math.round(height * pixelRatio);
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.clearRect(0, 0, width, height);
     const gradient = context.createLinearGradient(0, 0, 0, height);
     gradient.addColorStop(0, 'rgba(31,120,209,0.35)');
@@ -36,6 +41,12 @@
   document.addEventListener('DOMContentLoaded', () => {
     if (document.body.dataset.page === 'dashboard') {
       renderTrendChart();
+      const canvas = document.getElementById('trend-chart');
+      if (canvas && 'ResizeObserver' in window) {
+        new ResizeObserver(renderTrendChart).observe(canvas);
+      } else {
+        window.addEventListener('resize', renderTrendChart);
+      }
     }
   });
 })();
