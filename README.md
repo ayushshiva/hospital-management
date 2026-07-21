@@ -1954,19 +1954,6 @@ Feel free to use, modify, and improve it for educational or personal purposes.
 - 🏥 Multi-Hospital Management
 - 🩺 Doctor Video Consultation
 - 📅 Online Appointment Booking
-
----
-
-# 💖 Thank You
-
-<div align="center">
-
-## Thanks for Visiting ❤️
-
-Your support means a lot.
-
-If this project helped you,
-
 ### ⭐ Please Star the Repository ⭐
 
 <br>
