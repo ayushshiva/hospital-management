@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="staff">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html">Laboratory</a>
+          <a href="staff.html" class="active">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Staff Management</p>
+            <h1>Staff</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head"><h3>Staff Directory</h3><button class="btn btn-primary" id="add-staff-btn" type="button">Add Staff</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Name</th><th>Role</th><th>Shift</th><th>Contact</th><th>Actions</th></tr></thead><tbody id="staff-table-body"></tbody></table></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <div class="modal-overlay" id="staff-modal">
+      <div class="modal-card">
+        <div class="modal-head"><h3 id="staff-modal-title">Add Staff</h3><button class="icon-btn" data-modal-close type="button">×</button></div>
+        <form id="staff-form" class="form-grid">
+          <input type="hidden" id="staff-id" />
+          <label><span>Name *</span><input type="text" id="staff-name" required /></label>
+          <label><span>Gender</span><select id="staff-gender"><option>Male</option><option>Female</option><option>Other</option></select></label>
+          <label><span>Phone</span><input type="tel" id="staff-phone" required /></label>
+          <label><span>Email</span><input type="email" id="staff-email" /></label>
+          <label><span>Address</span><input type="text" id="staff-address" /></label>
+          <label><span>Department</span><input type="text" id="staff-department" /></label>
+          <label><span>Role *</span><select id="staff-role"><option>Doctor</option><option>Nurse</option><option>Receptionist</option><option>Lab Technician</option><option>Pharmacist</option><option>Admin</option><option>Other</option></select></label>
+          <label><span>Joining Date</span><input type="date" id="staff-joining" /></label>
+          <label><span>Monthly Salary (₹)</span><input type="number" id="staff-salary" min="0" /></label>
+          <label><span>Attendance (days worked)</span><input type="number" id="staff-attendance" min="0" /></label>
+          <label><span>Working Days</span><input type="number" id="staff-working-days" min="0" value="22" /></label>
+          <label><span>Leave Days</span><input type="number" id="staff-leave-days" min="0" /></label>
+          <label><span>Overtime (hours)</span><input type="number" id="staff-overtime" min="0" /></label>
+          <label><span>Bonus (₹)</span><input type="number" id="staff-bonus" min="0" /></label>
+          <label><span>Deduction (₹)</span><input type="number" id="staff-deduction" min="0" /></label>
+          <label><span>Payment Status</span><select id="staff-payment-status"><option>Pending</option><option>Paid</option></select></label>
+          <div class="form-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+      </div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/staff.js"></script>
+  </body>
+</html>

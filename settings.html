@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="settings">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html">Laboratory</a>
+          <a href="staff.html">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html" class="active">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">System Settings</p>
+            <h1>Settings</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head"><h3>Hospital Configuration</h3></div>
+          <form id="settings-form" class="form-grid">
+            <label><span>Hospital Name</span><input type="text" id="hospital-name" /></label>
+            <label><span>Logo URL</span><input type="text" id="hospital-logo" /></label>
+            <label><span>Theme</span><select id="hospital-theme"><option value="default">Default</option><option value="dark">Dark</option></select></label>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Save</button><button class="btn btn-secondary" id="backup-btn" type="button">Backup Data</button><button class="btn btn-secondary" id="restore-btn" type="button">Restore Data</button><button class="btn btn-danger" id="reset-btn" type="button">Reset Application</button></div>
+          </form>
+        </section>
+
+        <!-- Admin Pricing Section (visible only to Admin) -->
+        <section class="card page-card" id="pricing-section">
+          <div class="card-head">
+            <h3>Hospital Pricing Management</h3>
+            <button class="btn btn-primary" id="add-pricing-btn" type="button">Add Price</button>
+          </div>
+          <div class="toolbar">
+            <input id="pricing-search" type="search" placeholder="Search services..." style="flex:1;max-width:300px;">
+            <select id="pricing-cat-filter">
+              <option value="all">All Categories</option>
+              <option value="Consultation">Consultation</option>
+              <option value="Emergency">Emergency</option>
+              <option value="Registration">Registration</option>
+              <option value="Room">Room</option>
+              <option value="Surgery">Surgery</option>
+              <option value="Tax">Tax</option>
+              <option value="Lab">Lab</option>
+              <option value="Radiology">Radiology</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Nursing">Nursing</option>
+              <option value="Food">Food</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Service Name</th><th>Category</th><th>Price</th><th>Actions</th></tr></thead>
+              <tbody id="pricing-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <!-- Pricing Modal -->
+    <div class="modal-overlay" id="pricing-modal">
+      <div class="modal-card">
+        <div class="modal-head"><h3 id="pricing-modal-title">Add Price</h3><button class="icon-btn" data-modal-close type="button">×</button></div>
+        <form id="pricing-form" class="form-grid">
+          <input type="hidden" id="pricing-id" />
+          <label><span>Service Name *</span><input type="text" id="pricing-name" required /></label>
+          <label><span>Category</span><select id="pricing-category"><option>Consultation</option><option>Emergency</option><option>Registration</option><option>Room</option><option>Surgery</option><option>Tax</option><option>Lab</option><option>Radiology</option><option>Cardiology</option><option>Nursing</option><option>Food</option></select></label>
+          <label><span>Price (₹)</span><input type="number" id="pricing-price" min="0" required /></label>
+          <div class="form-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+      </div>
+    <div class="modal-overlay" id="confirm-modal">
+      <div class="modal-card">
+        <p id="confirm-message"></p>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" type="button" data-modal-cancel>Cancel</button>
+          <button class="btn btn-primary" type="button" data-modal-confirm>Confirm</button>
+        </div>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/pricing.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratory | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="laboratory">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html" class="active">Laboratory</a>
+          <a href="staff.html">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Laboratory</p>
+            <h1>Lab Tests & Reports</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head"><h3>Available Tests</h3><button class="btn btn-primary" id="add-test-btn" type="button">Add Lab Test</button></div>
+          <div class="grid-cards" id="tests-grid"></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <div class="modal-overlay" id="lab-modal">
+      <div class="modal-card">
+        <div class="modal-head"><h3 id="lab-modal-title">Add Lab Test</h3><button class="icon-btn" data-modal-close type="button">×</button></div>
+        <form id="lab-form" class="form-grid">
+          <input type="hidden" id="lab-id" />
+          <label><span>Test Name *</span><input type="text" id="lab-name" required /></label>
+          <label><span>Category</span><select id="lab-category"><option>Hematology</option><option>Biochemistry</option><option>Microbiology</option><option>Radiology</option><option>Pathology</option><option>Cardiology</option><option>Other</option></select></label>
+          <label><span>Price (₹)</span><input type="number" id="lab-price" min="0" /></label>
+          <label><span>Sample Type</span><input type="text" id="lab-sample" /></label>
+          <label><span>Normal Range</span><input type="text" id="lab-range" /></label>
+          <label><span>Result</span><textarea id="lab-result" rows="2"></textarea></label>
+          <label><span>Doctor</span><input type="text" id="lab-doctor" /></label>
+          <label><span>Patient</span><input type="text" id="lab-patient" /></label>
+          <div class="form-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+      </div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/laboratory.js"></script>
+  </body>
+</html>

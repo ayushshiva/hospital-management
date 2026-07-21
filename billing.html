@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="billing">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html" class="active">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html">Laboratory</a>
+          <a href="staff.html">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Billing</p>
+            <h1>Invoice Generator</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head"><h3>Create Invoice</h3><button class="btn btn-primary" id="print-bill-btn" type="button">Print Last Invoice</button></div>
+          <form id="billing-form" class="form-grid">
+            <!-- Patient Info -->
+            <label><span>Patient Name *</span><input type="text" id="billing-patient" required placeholder="Type name or ID" /></label>
+            <label><span>Patient ID</span><input type="text" id="billing-patient-id" readonly /></label>
+            <label><span>Doctor</span><input type="text" id="billing-doctor" /></label>
+            <label><span>Department</span><input type="text" id="billing-department" /></label>
+            <label><span>Room</span><input type="text" id="billing-room" /></label>
+            <label><span>Medicines</span><input type="text" id="billing-medicine" placeholder="Medicine name (deducts stock)" /></label>
+            <label><span>Admission Date</span><input type="date" id="billing-admission" /></label>
+            <label><span>Discharge Date</span><input type="date" id="billing-discharge" /></label>
+
+            <!-- Charges -->
+            <h4 style="grid-column:1/-1;margin:8px 0 0;">Charges (₹) — auto-filled from Admin Pricing</h4>
+            <label><span>Doctor Consultation Fee</span><input type="number" id="billing-doctor-fee" min="0" /></label>
+            <label><span>Admission Fee</span><input type="number" id="billing-admission-fee" min="0" /></label>
+            <label><span>Room Charges</span><input type="number" id="billing-room-charge" min="0" /></label>
+            <label><span>ICU Charges</span><input type="number" id="billing-icu-charge" min="0" /></label>
+            <label><span>Operation Charges</span><input type="number" id="billing-operation-charge" min="0" /></label>
+            <label><span>Medicine Charges</span><input type="number" id="billing-medicine-charge" min="0" /></label>
+            <label><span>Lab Charges</span><input type="number" id="billing-lab-charge" min="0" /></label>
+            <label><span>Radiology Charges</span><input type="number" id="billing-radiology-charge" min="0" /></label>
+            <label><span>Emergency Charges</span><input type="number" id="billing-emergency-charge" min="0" /></label>
+            <label><span>Nursing Charges</span><input type="number" id="billing-nursing-charge" min="0" /></label>
+            <label><span>Bed Charges</span><input type="number" id="billing-bed-charge" min="0" /></label>
+            <label><span>Food Charges</span><input type="number" id="billing-food-charge" min="0" /></label>
+
+            <!-- Discounts & Payments -->
+            <h4 style="grid-column:1/-1;margin:8px 0 0;">Discount & Payments</h4>
+            <label><span>Discount (₹)</span><input type="number" id="billing-discount" min="0" /></label>
+            <label><span>Advance Payment (₹)</span><input type="number" id="billing-advance" min="0" /></label>
+
+            <div class="invoice-summary" id="invoice-summary">
+              <p style="color:var(--muted);">Click "Calculate" to preview invoice</p>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-secondary" type="button" id="calculate-bill-btn">Calculate</button>
+              <button class="btn btn-primary" type="submit">Save Invoice</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/pricing.js"></script>
+    <script src="js/billing.js"></script>
+  </body>
+</html>

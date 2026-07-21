@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="doctors">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html" class="active">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html">Laboratory</a>
+          <a href="staff.html">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Doctor Management</p>
+            <h1>Doctors</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+          </div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head">
+            <h3>Doctor Directory</h3>
+            <button class="btn btn-primary" id="add-doctor-btn" type="button">Add Doctor</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>ID</th><th>Name</th><th>Department</th><th>Qualification</th><th>Experience</th><th>Availability</th><th>Fees</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="doctors-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <div class="modal-overlay" id="doctor-modal">
+      <div class="modal-card">
+        <div class="modal-head"><h3 id="doctor-modal-title">Add Doctor</h3><button class="icon-btn" data-modal-close type="button">×</button></div>
+        <form id="doctor-form" class="form-grid">
+          <input type="hidden" id="doctor-id" />
+          <label><span>Name</span><input type="text" id="doctor-name" required /></label>
+          <label><span>Department</span><input type="text" id="doctor-department" required /></label>
+          <label><span>Qualification</span><input type="text" id="doctor-qualification" /></label>
+          <label><span>Experience</span><input type="number" id="doctor-experience" /></label>
+          <label><span>Phone</span><input type="tel" id="doctor-phone" /></label>
+          <label><span>Email</span><input type="email" id="doctor-email" /></label>
+          <label><span>Availability</span><input type="text" id="doctor-availability" /></label>
+          <label><span>Fees</span><input type="number" id="doctor-fees" /></label>
+          <div class="form-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+      </div>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/doctors.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departments | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="departments">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <h2>Northstar</h2>
+            <p>Hospital</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="patients.html">Patients</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="departments.html" class="active">Departments</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="billing.html">Billing</a>
+          <a href="pharmacy.html">Pharmacy</a>
+          <a href="laboratory.html">Laboratory</a>
+          <a href="staff.html">Staff</a>
+          <a href="reports.html">Reports</a>
+          <a href="settings.html">Settings</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Department Module</p>
+            <h1>Departments</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn-toggle" id="theme-toggle" type="button">🌙</button>
+            <div class="user-pill" id="user-pill">Loading...</div>
+          </div>
+        </header>
+        <section class="card page-card">
+          <div class="card-head">
+            <h3>Department Directory</h3>
+            <button class="btn btn-primary" id="add-department-btn" type="button">Add Department</button>
+          </div>
+          <div class="grid-cards" id="departments-grid"></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast-stack"></div>
+    <div class="modal-overlay" id="department-modal">
+      <div class="modal-card">
+        <div class="modal-head"><h3 id="department-modal-title">Add Department</h3><button class="icon-btn" data-modal-close type="button">×</button></div>
+        <form id="department-form" class="form-grid">
+          <input type="hidden" id="department-id" />
+          <label><span>Name *</span><input type="text" id="department-name" required /></label>
+          <label><span>Department Head</span><input type="text" id="department-head" /></label>
+          <label><span>Description</span><textarea id="department-description" rows="2"></textarea></label>
+          <label><span>Number of Doctors</span><input type="number" id="department-doctors" min="0" /></label>
+          <label><span>Capacity</span><input type="number" id="department-capacity" min="0" /></label>
+          <label><span>Status</span><select id="department-status"><option>Active</option><option>Inactive</option></select></label>
+          <div class="form-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+      </div>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/departments.js"></script>
+  </body>
+</html>
