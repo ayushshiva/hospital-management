@@ -1417,13 +1417,7 @@ If you found this project useful
 
 <div align="center">
 
-## ⭐ Thank You For Visiting ⭐
 
-Made with ❤️ by **Ayush Kumar**
-
-</div>
-
-<!-- ================= END OF PART 5 ================= -->
 
 <!-- ========================================================= -->
 <!--               ULTIMATE README - PART 6                    -->
