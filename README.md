@@ -2077,41 +2077,8 @@ const developer = {
 
 ---
 
-# ❤️ Support
 
-If you like this project,
 
-⭐ Star this Repository
-
-🍴 Fork this Repository
-
-🐞 Report Issues
-
-💡 Suggest New Features
-
-🤝 Create Pull Requests
-
-📢 Share with Others
-
----
-
-# ☕ Support the Project
-
-Open Source grows because of people like you.
-
-Every
-
-⭐ Star
-
-🍴 Fork
-
-💬 Feedback
-
-❤️ Contribution
-
-helps make this project even better.
-
----
 
 # 🐍 GitHub Contribution Snake
 
